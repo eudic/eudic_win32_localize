@@ -29,8 +29,7 @@
         <location filename="about_dialog.ui" line="154"/>
         <location filename="GeneratedFiles/ui_about_dialog.h" line="229"/>
         <source>软件官网</source>
-        <translation>Homepage
-</translation>
+        <translation>Homepage</translation>
     </message>
     <message>
         <location filename="about_dialog.ui" line="167"/>
