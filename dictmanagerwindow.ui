@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>DictManagerWindow</class>
+ <widget class="QMainWindow" name="DictManagerWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>712</width>
+    <height>599</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>词库管理</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <property name="spacing">
+     <number>0</number>
+    </property>
+    <property name="leftMargin">
+     <number>0</number>
+    </property>
+    <property name="topMargin">
+     <number>0</number>
+    </property>
+    <property name="rightMargin">
+     <number>0</number>
+    </property>
+    <property name="bottomMargin">
+     <number>0</number>
+    </property>
+    <item>
+     <widget class="QSplitter" name="splitter">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+      <property name="opaqueResize">
+       <bool>true</bool>
+      </property>
+      <property name="childrenCollapsible">
+       <bool>false</bool>
+      </property>
+      <widget class="QTreeWidget" name="treeWidget">
+       <property name="maximumSize">
+        <size>
+         <width>200</width>
+         <height>16777215</height>
+        </size>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>9</pointsize>
+        </font>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>24</width>
+         <height>24</height>
+        </size>
+       </property>
+       <property name="indentation">
+        <number>10</number>
+       </property>
+       <attribute name="headerVisible">
+        <bool>false</bool>
+       </attribute>
+       <column>
+        <property name="text">
+         <string>1</string>
+        </property>
+       </column>
+      </widget>
+      <widget class="QTableWidget" name="listDict">
+       <property name="font">
+        <font>
+         <pointsize>9</pointsize>
+        </font>
+       </property>
+       <property name="contextMenuPolicy">
+        <enum>Qt::CustomContextMenu</enum>
+       </property>
+       <property name="acceptDrops">
+        <bool>false</bool>
+       </property>
+       <property name="editTriggers">
+        <set>QAbstractItemView::NoEditTriggers</set>
+       </property>
+       <property name="dragEnabled">
+        <bool>true</bool>
+       </property>
+       <property name="dragDropOverwriteMode">
+        <bool>false</bool>
+       </property>
+       <property name="dragDropMode">
+        <enum>QAbstractItemView::DragDrop</enum>
+       </property>
+       <property name="defaultDropAction">
+        <enum>Qt::MoveAction</enum>
+       </property>
+       <property name="selectionMode">
+        <enum>QAbstractItemView::ExtendedSelection</enum>
+       </property>
+       <property name="selectionBehavior">
+        <enum>QAbstractItemView::SelectRows</enum>
+       </property>
+       <column>
+        <property name="text">
+         <string>显示</string>
+        </property>
+       </column>
+       <column>
+        <property name="text">
+         <string>词典名称</string>
+        </property>
+       </column>
+       <column>
+        <property name="text">
+         <string>属性</string>
+        </property>
+       </column>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QToolBar" name="toolBar">
+   <property name="font">
+    <font>
+     <family>Microsoft YaHei UI</family>
+     <pointsize>9</pointsize>
+    </font>
+   </property>
+   <property name="windowTitle">
+    <string>toolBar</string>
+   </property>
+   <property name="movable">
+    <bool>false</bool>
+   </property>
+   <property name="allowedAreas">
+    <set>Qt::TopToolBarArea</set>
+   </property>
+   <property name="toolButtonStyle">
+    <enum>Qt::ToolButtonTextBesideIcon</enum>
+   </property>
+   <property name="floatable">
+    <bool>false</bool>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="actionAddDict"/>
+   <addaction name="actionDeleteDict"/>
+   <addaction name="actionEditLibGroup"/>
+   <addaction name="actionMoveUp"/>
+   <addaction name="actionMoveDown"/>
+   <addaction name="actionInfo"/>
+   <addaction name="actionMoreDict"/>
+  </widget>
+  <action name="actionAddDict">
+   <property name="icon">
+    <iconset resource="mainwindow.qrc">
+     <normaloff>:/res/dictmng/btn_add.png</normaloff>:/res/dictmng/btn_add.png</iconset>
+   </property>
+   <property name="text">
+    <string>安装词典</string>
+   </property>
+  </action>
+  <action name="actionDeleteDict">
+   <property name="icon">
+    <iconset resource="mainwindow.qrc">
+     <normaloff>:/res/dictmng/btn_remove.png</normaloff>:/res/dictmng/btn_remove.png</iconset>
+   </property>
+   <property name="text">
+    <string>删除词典</string>
+   </property>
+  </action>
+  <action name="actionEditLibGroup">
+   <property name="icon">
+    <iconset resource="mainwindow.qrc">
+     <normaloff>:/res/main/mnu_tool_setting.png</normaloff>:/res/main/mnu_tool_setting.png</iconset>
+   </property>
+   <property name="text">
+    <string>编辑词库分组</string>
+   </property>
+  </action>
+  <action name="actionMoveUp">
+   <property name="icon">
+    <iconset resource="mainwindow.qrc">
+     <normaloff>:/res/dictmng/btn_movedown.png</normaloff>:/res/dictmng/btn_movedown.png</iconset>
+   </property>
+   <property name="text">
+    <string>上移</string>
+   </property>
+  </action>
+  <action name="actionMoveDown">
+   <property name="icon">
+    <iconset resource="mainwindow.qrc">
+     <normaloff>:/res/dictmng/btn_moveup.png</normaloff>:/res/dictmng/btn_moveup.png</iconset>
+   </property>
+   <property name="text">
+    <string>下移</string>
+   </property>
+  </action>
+  <action name="actionInfo">
+   <property name="icon">
+    <iconset resource="mainwindow.qrc">
+     <normaloff>:/res/dictmng/btn_info.png</normaloff>:/res/dictmng/btn_info.png</iconset>
+   </property>
+   <property name="text">
+    <string>词库信息</string>
+   </property>
+  </action>
+  <action name="actionMoreDict">
+   <property name="icon">
+    <iconset resource="mainwindow.qrc">
+     <normaloff>:/res/dictmng/btn_star.png</normaloff>:/res/dictmng/btn_star.png</iconset>
+   </property>
+   <property name="text">
+    <string>更多扩充词库...</string>
+   </property>
+  </action>
+ </widget>
+ <resources>
+  <include location="mainwindow.qrc"/>
+ </resources>
+ <connections/>
+</ui>
