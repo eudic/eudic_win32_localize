@@ -60,7 +60,7 @@
         </sizepolicy>
        </property>
        <property name="styleSheet">
-        <string notr="true">background-color:white;border:1px</string>
+        <string notr="true"/>
        </property>
        <property name="text">
         <string>生词本分组</string>
