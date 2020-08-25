@@ -187,7 +187,7 @@
      <normaloff>:/res/main/mnu_tool_setting.png</normaloff>:/res/main/mnu_tool_setting.png</iconset>
    </property>
    <property name="text">
-    <string>编辑词库分组</string>
+    <string>编辑分组</string>
    </property>
   </action>
   <action name="actionMoveUp">
