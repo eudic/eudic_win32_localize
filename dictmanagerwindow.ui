@@ -51,11 +51,6 @@
          <height>16777215</height>
         </size>
        </property>
-       <property name="font">
-        <font>
-         <pointsize>9</pointsize>
-        </font>
-       </property>
        <property name="iconSize">
         <size>
          <width>24</width>
@@ -74,17 +69,9 @@
         </property>
        </column>
       </widget>
-      <widget class="QTableWidget" name="listDict">
-       <property name="font">
-        <font>
-         <pointsize>9</pointsize>
-        </font>
-       </property>
+      <widget class="DictManagerTableView" name="listDict">
        <property name="contextMenuPolicy">
         <enum>Qt::CustomContextMenu</enum>
-       </property>
-       <property name="acceptDrops">
-        <bool>false</bool>
        </property>
        <property name="editTriggers">
         <set>QAbstractItemView::NoEditTriggers</set>
@@ -93,44 +80,31 @@
         <bool>true</bool>
        </property>
        <property name="dragDropOverwriteMode">
-        <bool>false</bool>
+        <bool>true</bool>
        </property>
        <property name="dragDropMode">
-        <enum>QAbstractItemView::DragDrop</enum>
+        <enum>QAbstractItemView::DragOnly</enum>
        </property>
        <property name="defaultDropAction">
-        <enum>Qt::MoveAction</enum>
-       </property>
-       <property name="selectionMode">
-        <enum>QAbstractItemView::ExtendedSelection</enum>
+        <enum>Qt::TargetMoveAction</enum>
        </property>
        <property name="selectionBehavior">
         <enum>QAbstractItemView::SelectRows</enum>
        </property>
-       <column>
-        <property name="text">
-         <string>显示</string>
-        </property>
-       </column>
-       <column>
-        <property name="text">
-         <string>词典名称</string>
-        </property>
-       </column>
-       <column>
-        <property name="text">
-         <string>属性</string>
-        </property>
-       </column>
+       <attribute name="horizontalHeaderStretchLastSection">
+        <bool>true</bool>
+       </attribute>
+       <attribute name="verticalHeaderCascadingSectionResizes">
+        <bool>true</bool>
+       </attribute>
       </widget>
      </widget>
     </item>
    </layout>
   </widget>
-  <widget class="QToolBar" name="toolBar">
+  <widget class="EUMainToolBar" name="toolBar">
    <property name="font">
     <font>
-     <family>Microsoft YaHei UI</family>
      <pointsize>9</pointsize>
     </font>
    </property>
@@ -165,7 +139,7 @@
   </widget>
   <action name="actionAddDict">
    <property name="icon">
-    <iconset resource="mainwindow.qrc">
+    <iconset>
      <normaloff>:/res/dictmng/btn_add.png</normaloff>:/res/dictmng/btn_add.png</iconset>
    </property>
    <property name="text">
@@ -174,7 +148,7 @@
   </action>
   <action name="actionDeleteDict">
    <property name="icon">
-    <iconset resource="mainwindow.qrc">
+    <iconset>
      <normaloff>:/res/dictmng/btn_remove.png</normaloff>:/res/dictmng/btn_remove.png</iconset>
    </property>
    <property name="text">
@@ -183,7 +157,7 @@
   </action>
   <action name="actionEditLibGroup">
    <property name="icon">
-    <iconset resource="mainwindow.qrc">
+    <iconset>
      <normaloff>:/res/main/mnu_tool_setting.png</normaloff>:/res/main/mnu_tool_setting.png</iconset>
    </property>
    <property name="text">
@@ -192,7 +166,7 @@
   </action>
   <action name="actionMoveUp">
    <property name="icon">
-    <iconset resource="mainwindow.qrc">
+    <iconset>
      <normaloff>:/res/dictmng/btn_movedown.png</normaloff>:/res/dictmng/btn_movedown.png</iconset>
    </property>
    <property name="text">
@@ -201,7 +175,7 @@
   </action>
   <action name="actionMoveDown">
    <property name="icon">
-    <iconset resource="mainwindow.qrc">
+    <iconset>
      <normaloff>:/res/dictmng/btn_moveup.png</normaloff>:/res/dictmng/btn_moveup.png</iconset>
    </property>
    <property name="text">
@@ -210,7 +184,7 @@
   </action>
   <action name="actionInfo">
    <property name="icon">
-    <iconset resource="mainwindow.qrc">
+    <iconset>
      <normaloff>:/res/dictmng/btn_info.png</normaloff>:/res/dictmng/btn_info.png</iconset>
    </property>
    <property name="text">
@@ -219,7 +193,7 @@
   </action>
   <action name="actionMoreDict">
    <property name="icon">
-    <iconset resource="mainwindow.qrc">
+    <iconset>
      <normaloff>:/res/dictmng/btn_star.png</normaloff>:/res/dictmng/btn_star.png</iconset>
    </property>
    <property name="text">
@@ -227,8 +201,18 @@
    </property>
   </action>
  </widget>
- <resources>
-  <include location="mainwindow.qrc"/>
- </resources>
+ <customwidgets>
+  <customwidget>
+   <class>EUMainToolBar</class>
+   <extends>QToolBar</extends>
+   <header location="global">customclassstyle.h</header>
+  </customwidget>
+  <customwidget>
+   <class>DictManagerTableView</class>
+   <extends>QTableView</extends>
+   <header location="global">dictmanagerwindow.h</header>
+  </customwidget>
+ </customwidgets>
+ <resources/>
  <connections/>
 </ui>

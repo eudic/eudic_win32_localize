@@ -54,7 +54,12 @@
      </item>
      <item>
       <property name="text">
-       <string>XML格式</string>
+       <string>XML格式(原始数据)</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>CSV格式(可用 Excel 打开)</string>
       </property>
      </item>
      <item>

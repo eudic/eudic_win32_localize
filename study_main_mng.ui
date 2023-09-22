@@ -97,6 +97,26 @@
    </layout>
   </widget>
   <widget class="QStatusBar" name="statusBar"/>
+  <widget class="EUMainToolBar" name="toolBar">
+   <property name="windowTitle">
+    <string>toolBar</string>
+   </property>
+   <property name="movable">
+    <bool>false</bool>
+   </property>
+   <property name="allowedAreas">
+    <set>Qt::TopToolBarArea</set>
+   </property>
+   <property name="floatable">
+    <bool>false</bool>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+  </widget>
   <action name="actionExit">
    <property name="text">
     <string>退出</string>
@@ -114,6 +134,11 @@
    <class>StudyTableView</class>
    <extends>QTableView</extends>
    <header location="global">study_table_view.h</header>
+  </customwidget>
+  <customwidget>
+   <class>EUMainToolBar</class>
+   <extends>QToolBar</extends>
+   <header location="global">customclassstyle.h</header>
   </customwidget>
  </customwidgets>
  <resources/>
