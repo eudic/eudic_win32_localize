@@ -2,18 +2,22 @@
 <ui version="4.0">
  <class>LoginDialog</class>
  <widget class="QDialog" name="LoginDialog">
-  <property name="geometry">
-   <rect>
-    <x>0</x>
-    <y>0</y>
-    <width>417</width>
-    <height>443</height>
-   </rect>
-  </property>
   <property name="windowTitle">
    <string>登录学习账号</string>
   </property>
   <layout class="QGridLayout" name="gridLayout">
+   <property name="leftMargin">
+    <number>0</number>
+   </property>
+   <property name="topMargin">
+    <number>0</number>
+   </property>
+   <property name="rightMargin">
+    <number>0</number>
+   </property>
+   <property name="bottomMargin">
+    <number>0</number>
+   </property>
    <item row="2" column="0">
     <widget class="QWidget" name="gridWidget" native="true">
      <layout class="QGridLayout" name="gridLayout_2">
@@ -93,9 +97,7 @@
              </property>
              <property name="font">
               <font>
-               <family>Arial</family>
                <pointsize>11</pointsize>
-               <weight>75</weight>
                <bold>true</bold>
               </font>
              </property>
@@ -205,18 +207,33 @@
             </widget>
            </item>
            <item>
-            <widget class="QPushButton" name="forgetPwdLabel">
+            <widget class="EUThemePlainPushButton" name="forgetPwdLabel">
              <property name="sizePolicy">
-              <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+              <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
                <horstretch>0</horstretch>
                <verstretch>0</verstretch>
               </sizepolicy>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>100</width>
+               <height>30</height>
+              </size>
+             </property>
+             <property name="baseSize">
+              <size>
+               <width>0</width>
+               <height>0</height>
+              </size>
              </property>
              <property name="cursor">
               <cursorShape>PointingHandCursor</cursorShape>
              </property>
              <property name="focusPolicy">
               <enum>Qt::NoFocus</enum>
+             </property>
+             <property name="contextMenuPolicy">
+              <enum>Qt::NoContextMenu</enum>
              </property>
              <property name="text">
               <string>PushButton</string>
@@ -254,6 +271,12 @@
            </sizepolicy>
           </property>
           <layout class="QHBoxLayout" name="horizontalLayout">
+           <property name="topMargin">
+            <number>0</number>
+           </property>
+           <property name="bottomMargin">
+            <number>0</number>
+           </property>
            <item>
             <widget class="QPushButton" name="pushButton_Login">
              <property name="focusPolicy">
@@ -354,7 +377,7 @@
           </spacer>
          </item>
          <item>
-          <widget class="QPushButton" name="closeButton">
+          <widget class="EUCloseButton" name="closeButton">
            <property name="focusPolicy">
             <enum>Qt::NoFocus</enum>
            </property>
@@ -371,13 +394,23 @@
    </item>
   </layout>
  </widget>
+ <customwidgets>
+  <customwidget>
+   <class>EUCloseButton</class>
+   <extends>QPushButton</extends>
+   <header location="global">customclassstyle.h</header>
+  </customwidget>
+  <customwidget>
+   <class>EUThemePlainPushButton</class>
+   <extends>QPushButton</extends>
+   <header location="global">customclassstyle.h</header>
+  </customwidget>
+ </customwidgets>
  <tabstops>
   <tabstop>tbUserName</tabstop>
   <tabstop>tbPassword</tabstop>
   <tabstop>pushButton_Login</tabstop>
  </tabstops>
- <resources>
-  <include location="mainwindow.qrc"/>
- </resources>
+ <resources/>
  <connections/>
 </ui>

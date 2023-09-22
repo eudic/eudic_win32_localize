@@ -149,8 +149,17 @@
       <item row="2" column="0">
        <widget class="QWidget" name="controlLayout" native="true">
         <layout class="QHBoxLayout" name="controlLayout_">
+         <property name="leftMargin">
+          <number>0</number>
+         </property>
          <item>
           <widget class="QPushButton" name="pushButton_Bold">
+           <property name="maximumSize">
+            <size>
+             <width>40</width>
+             <height>16777215</height>
+            </size>
+           </property>
            <property name="text">
             <string>Bold</string>
            </property>
@@ -158,6 +167,12 @@
          </item>
          <item>
           <widget class="QPushButton" name="pushButton_Italic">
+           <property name="maximumSize">
+            <size>
+             <width>40</width>
+             <height>16777215</height>
+            </size>
+           </property>
            <property name="text">
             <string>Italic</string>
            </property>
@@ -165,6 +180,12 @@
          </item>
          <item>
           <widget class="QPushButton" name="pushButton_Image">
+           <property name="maximumSize">
+            <size>
+             <width>40</width>
+             <height>16777215</height>
+            </size>
+           </property>
            <property name="text">
             <string>Image</string>
            </property>
